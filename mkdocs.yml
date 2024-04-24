@@ -1,10 +1,10 @@
 site_name: mkdocs-example
-#site_url: https://IkuoShige.github.io/mkdocs-example/
+site_url: https://IkuoShige.github.io/mkdocs-example/
 site_author: Ikuo Shige
 
-#repo_name: IkuoShige/mkdocs-example 
-#repo_url: https://github.com/IkuoShige/mkdocs-example
-#repo: fontawesome/brands/github
+repo_name: IkuoShige/mkdocs-example 
+repo_url: https://github.com/IkuoShige/mkdocs-example
+repo: fontawesome/brands/github
 
 copyright: Copyright &copy; 2024 Ikuo Shige
 
