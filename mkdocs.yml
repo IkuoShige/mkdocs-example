@@ -3,7 +3,7 @@ site_url: https://IkuoShige.github.io/mkdocs-example/
 site_author: Ikuo Shige
 
 repo_name: IkuoShige/mkdocs-example 
-repo_url: https://github.com/IkuoShige/mkdocs-example
+#repo_url: https://github.com/IkuoShige/mkdocs-example
 repo: fontawesome/brands/github
 
 copyright: Copyright &copy; 2024 Ikuo Shige
@@ -52,9 +52,7 @@ extra:
     manifest: 'manifest.webmanifest'
     social:
       - icon: fontawesome/brands/github
-        link: https://github.com/uhobeike
-      - icon: fontawesome/brands/twitter
-        link: https://twitter.com/BEIKE_RE
+        link: https://github.com/IkuoShige
 
 markdown_extensions:
     - admonition
