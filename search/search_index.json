@@ -1,0 +1,1 @@
+{"config":{"lang":["ja"],"separator":"[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+","pipeline":["stemmer"]},"docs":[{"location":"","title":"\u3053\u306e\u30b5\u30a4\u30c8\u306b\u3064\u3044\u3066","text":""},{"location":"#_2","title":"\u6982\u8981","text":"<p>test</p>"}]}
