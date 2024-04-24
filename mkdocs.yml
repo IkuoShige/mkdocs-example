@@ -1,0 +1,79 @@
+site_name: mkdocs-example
+site_url: https://IkuoShige.github.io/mkdocs-example/
+site_author: Ikuo Shige
+
+repo_name: IkuoShige/mkdocs-example 
+repo_url: https://github.com/IkuoShige/mkdocs-example
+repo: fontawesome/brands/github
+
+copyright: Copyright &copy; 2024 Ikuo Shige
+
+theme:
+    name: material
+    language: ja
+    # 使用可能色は定義された21色
+    #    red, pink, purple, deep purple, indigo, blue, light blue, cyan,
+    #    teal,  green, light green, lime, yellow, amber, orange,
+    #    deep orange,   brown, grey, blue grey, white
+    font:
+        text: 'Roboto'
+        code: 'Roboto Mono'
+    features:
+        - navigation.tabs
+        - navigation.top
+        - navigation.expand
+        - content.code.annotate
+        - content.code.copy
+        - content.code.select
+        - content.code.annotate
+    palette:
+        - scheme: default
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: ダークモードに切り替えます。
+
+        - scheme: slate
+          primary: black
+          accent: indigo
+          toggle:
+              icon: material/toggle-switch
+              name: ライトモードに切り替えます。
+    icon:
+      repo: fontawesome/brands/github
+
+extra:
+    logo:
+        # 利用可能なアイコンは以下を参照
+        # https://material.io/resources/icons/?icon=description&style=baseline
+        icon: 'developer_board'
+    # ウェブアプリマニフェストを有効化
+    manifest: 'manifest.webmanifest'
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/uhobeike
+      - icon: fontawesome/brands/twitter
+        link: https://twitter.com/BEIKE_RE
+
+markdown_extensions:
+    - admonition
+    - attr_list
+    - footnotes
+    - pymdownx.tabbed:
+        alternate_style: true
+    - pymdownx.superfences
+    - footnotes
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - pymdownx.details
+
+nav:
+
+- Home:
+  - このサイトについて: index.md
