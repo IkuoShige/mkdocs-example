@@ -55,30 +55,30 @@
     `./.github/workflows/deploy.yaml`を作成し、push
     ```yaml
     on:
-        push:
-            branches:
-            - main
-        jobs:
-        deploy:
-            runs-on: ubuntu-latest
-            steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-python@v2
-                with:
-                python-version: 3.9
-            - name: setup mkdocs project
-                if: ${{ success() }}
-                env:
-                REF: ${{ github.ref }}
-                run: |
-                export VER=`echo "${REF##*/}"`
-                echo "version=${VER}" >> $GITHUB_ENV
-                git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
-                git config --local user.name "${GITHUB_ACTOR}"
-                git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-                git fetch
-            - run: pip install mkdocs-material pymdown-extensions
-            - run: mkdocs gh-deploy --force
+      push:
+        branches:
+        - main
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - uses: actions/setup-python@v2
+            with:
+              python-version: 3.9
+          - name: setup mkdocs project
+            if: ${{ success() }}
+            env:
+              REF: ${{ github.ref }}
+            run: |
+              export VER=`echo "${REF##*/}"`
+              echo "version=${VER}" >> $GITHUB_ENV
+              git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+              git config --local user.name "${GITHUB_ACTOR}"
+              git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+              git fetch
+          - run: pip install mkdocs-material pymdown-extensions
+          - run: mkdocs gh-deploy --force
     ```
 
     github actionsのworkflowが終わると、ページにアクセスできるようになる
