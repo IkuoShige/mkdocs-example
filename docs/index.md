@@ -82,3 +82,78 @@
     ```
 
     github actionsのworkflowが終わると、ページにアクセスできるようになる
+
+-----------------
+# mkdosc column
+
+## アラート修飾: markdown拡張機能
+
+!!! note
+    This is note
+    
+    * a
+    * b
+
+    | |a|b
+    |:------|-----|-----
+    |c|ac|bc
+    |d|ad|bd
+
+!!! abstract
+    This is abstract
+
+!!! info
+    This is info
+
+!!! tip
+    This is tip
+
+!!! success
+    This is success, or check
+
+!!! question
+    This is question
+
+!!! warning
+    This is warning
+
+!!! failure
+    This is failure
+
+!!! danger
+    This is danger
+
+!!! bug
+    This is bug
+
+!!! example
+    This is example
+
+!!! cite
+    This is cite
+
+### setting
+
+```yaml
+markdown_extensions:
+    - admonition
+    - pymdownx.superfences
+```
+
+## コンテンツの折りたたみ: markdown拡張機能
+
+???+ note
+    This is note
+    
+    ???+ note "nested note 1"
+        This is nested note 1
+    ???+ note "nested note 2"
+        This is nested note 2
+
+### setting
+
+```yaml
+markdown_extensions:
+    - pymdownx.details
+```
+
