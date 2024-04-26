@@ -83,6 +83,19 @@
 
     github actionsのworkflowが終わると、ページにアクセスできるようになる
 
+    !!! note
+        deploy時に`mkdocs deploy`したくないとき:
+
+        `.github/workflows/deploy.yaml`を変更する
+
+        ```yaml
+        - name: Deploy MkDocs
+          uses: peaceiris/actions-gh-pages@v4
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./site
+        ```
+
 -----------------
 # mkdosc column
 
